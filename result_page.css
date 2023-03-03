@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+#container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#vertical-div{
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    background-color: rgb(35, 49, 49);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#vertical-div img{
+    width: 80%;
+    border-radius: 3%;
+    margin-top: 5%;
+}
+
+#meal-name h2{
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    color: rgb(239, 220, 186);
+}
+
+#ingredients-list{
+    font-family: 'Maven Pro', sans-serif;
+    color: rgb(239, 220, 186);
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+#ingredients-list li{
+    margin-bottom: 5%;
+}
+
+#meal-info{
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+    overflow-y: auto;
+}
+
+#meal-info iframe{
+    height: 350px;
+    width: 600px;
+    margin-top: 5%;
+}
+
+#meal-info span{
+    width: 85%;
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
