@@ -65,6 +65,20 @@ body{
     margin-top: 5%;
 }
 
+@media screen and (max-width: 1000px) {
+    #meal-info iframe{
+        height: 250px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #meal-info iframe{
+        height: 200px;
+        width: 300px;
+    }
+}
+
 #meal-info span{
     width: 85%;
     margin-top: 5%;
