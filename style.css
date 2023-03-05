@@ -17,6 +17,7 @@ body{
 
 #search-div{
     margin: 5%;
+    margin-bottom: 2%;
 }
 
 #search-div input{
@@ -33,7 +34,7 @@ body{
     color: rgb(181, 180, 177);
 }
 
-#search-div button{
+.sub-btn{
     height: 35px;
     width: 35px;
     background-color: #b74a68;
@@ -44,12 +45,28 @@ body{
     color: blanchedalmond;
 }
 
-#search-div button:hover{
+.sub-btn:hover{
     box-shadow: 0px 0px 8px 1px rgb(41, 10, 10);
 }
 
-#search-div button i{
+.sub-btn i{
     background-color: #b74a68;
+}
+
+#searchByArea-div{
+    margin: 2% 5% 2% 5%;
+}
+
+#searchByArea-div select{
+    height: 35px;
+    width: 30%;
+    border: 1px solid;
+    border-radius: 5px;
+    color: rgb(239, 220, 186);
+}
+
+#searchByArea-div select option:disabled{
+    display: none;
 }
 
 #result-heading{
