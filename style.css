@@ -30,6 +30,12 @@ body{
     padding-left: 0.7%;
 }
 
+@media screen and (max-width: 800px) {
+    #search-div input{
+        width: 50%;
+    }
+}
+
 #search-div input::placeholder{
     color: rgb(181, 180, 177);
 }
@@ -63,6 +69,12 @@ body{
     border: 1px solid;
     border-radius: 5px;
     color: rgb(239, 220, 186);
+}
+
+@media screen and (max-width: 800px) {
+    #searchByArea-div select{
+        width: 50%;
+    }
 }
 
 #searchByArea-div select option:disabled{
