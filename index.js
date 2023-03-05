@@ -21,6 +21,19 @@ search.addEventListener('input', async function(){
     })
 })
 
+//add event listeners to favorite list elements
+function handleClickEvents(element){
+    element.addEventListener('click', function(){
+        searchMealbyID(element);
+    })
+
+    const favorite = element.querySelector('.favorite-btn i');
+    favorite.addEventListener('click', function(event){
+        event.stopPropagation();
+        favorite_list.removeChild(element);
+    })
+}
+
 //get the full meal details, convert it to string and pass it through the url
 async function searchMealbyID(element){
     const meal_id = element.id;
@@ -29,7 +42,7 @@ async function searchMealbyID(element){
     window.location.href = `./result_page.html?data=${jsonString}`;
 }
 
-//search all meals and display result
+//search all function
 async function searchMeal(){
 
     try {
@@ -47,6 +60,7 @@ async function searchMeal(){
             return;
         }
 
+        //display all meal result
         result_heading.innerHTML = `Results for '<b>${item}</b>'`;
         meal_display.innerHTML = data.meals.map(meal => `
             <div class="meal-div" id="${meal.idMeal}">
@@ -56,6 +70,7 @@ async function searchMeal(){
             </div>
         `).join('');
 
+        //add event listeners to all result
         let meal_div = document.getElementsByClassName('meal-div');
         for(let element of meal_div){
             element.addEventListener('click', function(){
@@ -72,6 +87,7 @@ async function searchMeal(){
                 fav.classList.toggle('favorite-color');
                 const meal_id = fav.getAttribute('data-id');
                 const favorite_meal_div = document.getElementById(`${meal_id}`).cloneNode(true);
+                handleClickEvents(favorite_meal_div);
                 favorite_meal_div.setAttribute('data-id', 'A'+meal_id);
                 if(fav.classList.contains('favorite-color')){
                     favorite_list.append(favorite_meal_div);
@@ -88,5 +104,3 @@ async function searchMeal(){
 }
 
 sub_btn.addEventListener('click', searchMeal);
-
-
