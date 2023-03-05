@@ -57,7 +57,7 @@ body{
     font-size: 1.5rem;
 }
 
-#meal-display{
+.display{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -70,10 +70,28 @@ body{
     /* border: 2px solid; */
     font-size: 1.1rem;
     border-radius: 5%;
+    position: relative;
 }
 
 .meal-div:hover{
     box-shadow: 0px 0px 15px 0.5px rgb(223 217 122);
+}
+
+.favorite-btn{
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    font-size: 1.5rem;
+    color: #be400a;
+    background-color: transparent;
+}
+
+.favorite-color{
+    color: #ff0000;
+}
+
+.favorite-btn i{
+    background-color: transparent;
 }
 
 .meal-div img{
@@ -85,4 +103,10 @@ body{
 .meal-div p{
     font-family: 'Comfortaa', 'cursive';
     color: rgb(237, 232, 223);
+}
+
+#favorite-display p{
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(239, 220, 186);
+    font-size: 1.5rem;
 }

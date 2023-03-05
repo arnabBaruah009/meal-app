@@ -16,15 +16,21 @@
 <body>
     <div id="container">
         <div id="search-div">
-            <input id="search" type="text" placeholder="Search Meal">
+            <input id="search" type="text" placeholder="Search Meal" list="search-suggestions">
+            <datalist id="search-suggestions"></datalist>
             <button id="sub-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         
         <div id="result-display">
             <p id="result-heading"></p>
-            <div id="meal-display">
+            <div id="meal-display" class="display">
                 
             </div>
+        </div>
+
+        <div id="favorite-display">
+            <p>My Favorites</p>
+            <div id="favorite-list" class="display"></div>
         </div>
     </div>
 
